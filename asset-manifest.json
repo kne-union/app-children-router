@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.js": "/app-children-router/static/js/main.6bbf2119.js",
-    "app_children_router_0_1_0.js": "/app-children-router/remoteEntry.js",
+    "main.js": "/app-children-router/static/js/main.1e5f902a.js",
+    "app_children_router_0_1_1.js": "/app-children-router/remoteEntry.js",
     "static/css/198.6d404fbc.chunk.css": "/app-children-router/static/css/198.6d404fbc.chunk.css",
-    "static/js/198.7235d73c.chunk.js": "/app-children-router/static/js/198.7235d73c.chunk.js",
-    "static/js/423.4656a220.chunk.js": "/app-children-router/static/js/423.4656a220.chunk.js",
+    "static/js/198.a6c03fa9.chunk.js": "/app-children-router/static/js/198.a6c03fa9.chunk.js",
+    "static/js/423.65ec247e.chunk.js": "/app-children-router/static/js/423.65ec247e.chunk.js",
     "static/js/97.5e37a5d0.chunk.js": "/app-children-router/static/js/97.5e37a5d0.chunk.js",
     "static/js/467.0810139c.chunk.js": "/app-children-router/static/js/467.0810139c.chunk.js",
     "static/js/379.da9b39b3.chunk.js": "/app-children-router/static/js/379.da9b39b3.chunk.js",
     "static/js/446.b8af0d9c.chunk.js": "/app-children-router/static/js/446.b8af0d9c.chunk.js",
     "static/js/233.3701ba18.chunk.js": "/app-children-router/static/js/233.3701ba18.chunk.js",
-    "static/js/690.4e774fcb.chunk.js": "/app-children-router/static/js/690.4e774fcb.chunk.js",
+    "static/js/690.7931b98d.chunk.js": "/app-children-router/static/js/690.7931b98d.chunk.js",
     "static/js/201.0bd27ad7.chunk.js": "/app-children-router/static/js/201.0bd27ad7.chunk.js",
     "static/js/84.43b8d771.chunk.js": "/app-children-router/static/js/84.43b8d771.chunk.js",
     "static/js/705.d464f194.chunk.js": "/app-children-router/static/js/705.d464f194.chunk.js",
@@ -20,17 +20,17 @@
     "static/js/245.ab90673b.chunk.js": "/app-children-router/static/js/245.ab90673b.chunk.js",
     "static/js/959.703d5601.chunk.js": "/app-children-router/static/js/959.703d5601.chunk.js",
     "index.html": "/app-children-router/index.html",
-    "main.6bbf2119.js.map": "/app-children-router/static/js/main.6bbf2119.js.map",
+    "main.1e5f902a.js.map": "/app-children-router/static/js/main.1e5f902a.js.map",
     "remoteEntry.js.map": "/app-children-router/remoteEntry.js.map",
     "198.6d404fbc.chunk.css.map": "/app-children-router/static/css/198.6d404fbc.chunk.css.map",
-    "198.7235d73c.chunk.js.map": "/app-children-router/static/js/198.7235d73c.chunk.js.map",
-    "423.4656a220.chunk.js.map": "/app-children-router/static/js/423.4656a220.chunk.js.map",
+    "198.a6c03fa9.chunk.js.map": "/app-children-router/static/js/198.a6c03fa9.chunk.js.map",
+    "423.65ec247e.chunk.js.map": "/app-children-router/static/js/423.65ec247e.chunk.js.map",
     "97.5e37a5d0.chunk.js.map": "/app-children-router/static/js/97.5e37a5d0.chunk.js.map",
     "467.0810139c.chunk.js.map": "/app-children-router/static/js/467.0810139c.chunk.js.map",
     "379.da9b39b3.chunk.js.map": "/app-children-router/static/js/379.da9b39b3.chunk.js.map",
     "446.b8af0d9c.chunk.js.map": "/app-children-router/static/js/446.b8af0d9c.chunk.js.map",
     "233.3701ba18.chunk.js.map": "/app-children-router/static/js/233.3701ba18.chunk.js.map",
-    "690.4e774fcb.chunk.js.map": "/app-children-router/static/js/690.4e774fcb.chunk.js.map",
+    "690.7931b98d.chunk.js.map": "/app-children-router/static/js/690.7931b98d.chunk.js.map",
     "201.0bd27ad7.chunk.js.map": "/app-children-router/static/js/201.0bd27ad7.chunk.js.map",
     "84.43b8d771.chunk.js.map": "/app-children-router/static/js/84.43b8d771.chunk.js.map",
     "705.d464f194.chunk.js.map": "/app-children-router/static/js/705.d464f194.chunk.js.map",
@@ -41,6 +41,6 @@
     "959.703d5601.chunk.js.map": "/app-children-router/static/js/959.703d5601.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.6bbf2119.js"
+    "static/js/main.1e5f902a.js"
   ]
 }
