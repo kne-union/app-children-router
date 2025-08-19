@@ -1,7 +1,7 @@
 {
   "name": "@kne/app-children-router",
   "version": "0.1.0",
-  "description": "应用子路由",
+  "description": "定义应用子路由",
   "syntax": {
     "esmodules": true
   },
