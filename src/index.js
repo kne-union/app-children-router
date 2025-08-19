@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import loadable from '@loadable/component';
 import { Spin } from 'antd';
 
-const loadableWithProps = (loader, props = {}) => {
+export const loadableWithProps = (loader, props = {}) => {
   const PageComponent = loadable(loader, {
     fallback: <Spin style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)' }} />
   });
@@ -14,8 +14,8 @@ const loadableWithProps = (loader, props = {}) => {
 const AppChildrenRouter = ({ list, children, ...props }) => {
   return (
     <Routes>
-      {list.map(({ path, loader }, index) => {
-        return <Route key={index} path={path} element={loadableWithProps(loader, props)} />;
+      {list.map(({ loader, ...routerProps }, index) => {
+        return <Route key={index} {...routerProps} element={loadableWithProps(loader, props)} />;
       })}
       <Route path="*" element={children} />
     </Routes>
