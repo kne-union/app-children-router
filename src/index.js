@@ -14,8 +14,8 @@ export const loadableWithProps = (loader, props = {}) => {
 const AppChildrenRouter = ({ list, children, ...props }) => {
   return (
     <Routes>
-      {list.map(({ loader, ...routerProps }, index) => {
-        return <Route key={index} {...routerProps} element={loadableWithProps(loader, props)} />;
+      {list.map(({ loader, elementProps, ...routerProps }, index) => {
+        return <Route key={index} {...routerProps} element={loadableWithProps(loader, Object.assign({}, props, elementProps))} />;
       })}
       <Route path="*" element={children} />
     </Routes>
