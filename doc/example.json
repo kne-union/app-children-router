@@ -2,8 +2,8 @@
   "isFull": false,
   "list": [
     {
-      "title": "这里填写示例标题",
-      "description": "这里填写示例说明",
+      "title": "AppChildrenRouter 基础示例",
+      "description": "展示如何使用 AppChildrenRouter 实现子路由功能",
       "code": "./base.js",
       "scope": [
         {
