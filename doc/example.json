@@ -10,6 +10,14 @@
           "name": "_AppChildrenRouter",
           "packageName": "@kne/current-lib_app-children-router",
           "importStatement": "import * as _AppChildrenRouter from \"@kne/app-children-router\""
+        },
+        {
+          "name": "_reactRouterDom",
+          "packageName": "react-router-dom"
+        },
+        {
+          "name": "antd",
+          "packageName": "antd"
         }
       ]
     }
