@@ -15,7 +15,7 @@ export const loadableWithProps = (loader, props = {}, loading) => {
 
 export { preset, Error, NotFound };
 
-const AppChildrenRouter = ({ list, errorPage = globalParams.errorPage, notFoundPage = globalParams.notFountPage, loading, children, ...props }) => {
+const AppChildrenRouter = ({ list = [], errorPage = globalParams.errorPage, notFoundPage = globalParams.notFountPage, loading, children, ...props }) => {
   const targetList = useMemo(() => {
     const output = list.slice(0);
     const defaultPageList = [Error, NotFound];
