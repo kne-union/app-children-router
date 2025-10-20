@@ -15,7 +15,7 @@ export const loadableWithProps = (loader, props = {}, loading) => {
 
 export { preset, Error, NotFound };
 
-const AppChildrenRouter = ({ list = [], errorPage = globalParams.errorPage, notFoundPage = globalParams.notFountPage, loading, children, ...props }) => {
+const AppChildrenRouter = ({ element, list = [], errorPage = globalParams.errorPage, notFoundPage = globalParams.notFountPage, loading, children, ...props }) => {
   const targetList = useMemo(() => {
     const output = list.slice(0);
     const defaultPageList = [Error, NotFound];
@@ -30,12 +30,19 @@ const AppChildrenRouter = ({ list = [], errorPage = globalParams.errorPage, notF
     });
     return output;
   }, [list, errorPage, notFoundPage]);
+  const childrenList = targetList.map(({ loader, element, elementProps, ...routerProps }, index) => {
+    return <Route key={routerProps.path || index} {...routerProps} element={element || loadableWithProps(loader, Object.assign({}, props, elementProps), loading)} />;
+  });
   return (
     <Routes>
-      {targetList.map(({ loader, elementProps, ...routerProps }, index) => {
-        return <Route key={routerProps.path || index} {...routerProps} element={loadableWithProps(loader, Object.assign({}, props, elementProps), loading)} />;
-      })}
-      <Route path="*" element={children || <Navigate to={`${props.baseUrl || ''}/404`} />} />
+      {element ? (
+        <Route path="*" element={element}>
+          {childrenList}
+          <Route path="*" element={children || <Navigate to={`${props.baseUrl || ''}/404`} />} />
+        </Route>
+      ) : (
+        childrenList
+      )}
     </Routes>
   );
 };
