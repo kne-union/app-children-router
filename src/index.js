@@ -33,12 +33,13 @@ const AppChildrenRouter = ({ element, list = [], errorPage = globalParams.errorP
   const childrenList = targetList.map(({ loader, element, elementProps, ...routerProps }, index) => {
     return <Route key={routerProps.path || index} {...routerProps} element={element || loadableWithProps(loader, Object.assign({}, props, elementProps), loading)} />;
   });
+
+  childrenList.push(<Route path="*" key={childrenList.length} element={children || <Navigate to={`${props.baseUrl || ''}/404`} />} />);
   return (
     <Routes>
       {element ? (
         <Route path="*" element={element}>
           {childrenList}
-          <Route path="*" element={children || <Navigate to={`${props.baseUrl || ''}/404`} />} />
         </Route>
       ) : (
         childrenList
