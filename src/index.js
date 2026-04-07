@@ -15,7 +15,15 @@ export const loadableWithProps = (loader, props = {}, loading) => {
 
 export { preset, Error, NotFound };
 
-const AppChildrenRouter = ({ element, list = [], errorPage = globalParams.errorPage, notFoundPage = globalParams.notFountPage, loading, children, ...props }) => {
+const AppChildrenRouter = ({
+                             element,
+                             list = [],
+                             errorPage = globalParams.errorPage,
+                             notFoundPage = globalParams.notFountPage,
+                             loading,
+                             children,
+                             ...props
+                           }) => {
   const targetList = useMemo(() => {
     const output = list.slice(0);
     const defaultPageList = [Error, NotFound];
@@ -31,21 +39,19 @@ const AppChildrenRouter = ({ element, list = [], errorPage = globalParams.errorP
     return output;
   }, [list, errorPage, notFoundPage]);
   const childrenList = targetList.map(({ loader, element, elementProps, ...routerProps }, index) => {
-    return <Route key={routerProps.path || index} {...routerProps} element={element || loadableWithProps(loader, Object.assign({}, props, elementProps), loading)} />;
+    return <Route key={routerProps.path || index} {...routerProps}
+                  element={element || loadableWithProps(loader, Object.assign({}, props, elementProps), loading)} />;
   });
 
-  childrenList.push(<Route path="*" key={childrenList.length} element={children || <Navigate to={`${props.baseUrl || ''}/404`} />} />);
-  return (
-    <Routes>
-      {element ? (
-        <Route path="*" element={element}>
-          {childrenList}
-        </Route>
-      ) : (
-        childrenList
-      )}
-    </Routes>
-  );
+  if (children || notFoundPage) {
+    childrenList.push(<Route path="*" key={childrenList.length}
+                             element={children || <Navigate to={`${props.baseUrl || ''}/404`} />} />);
+  }
+  return (<Routes>
+    {element ? (<Route path="*" element={element}>
+      {childrenList}
+    </Route>) : (childrenList)}
+  </Routes>);
 };
 
 export default AppChildrenRouter;
