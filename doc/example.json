@@ -1,10 +1,66 @@
 {
-  "isFull": false,
+  "isFull": true,
   "list": [
     {
-      "title": "AppChildrenRouter 基础示例",
-      "description": "展示如何使用 AppChildrenRouter 实现子路由功能",
+      "title": "基础用法",
+      "description": "展示 AppChildrenRouter 的基本使用方法，包括路由配置、错误页面和 404 页面",
       "code": "./base.js",
+      "scope": [
+        {
+          "name": "_AppChildrenRouter",
+          "packageName": "@kne/current-lib_app-children-router",
+          "importStatement": "import * as _AppChildrenRouter from \"@kne/app-children-router\""
+        },
+        {
+          "name": "_reactRouterDom",
+          "packageName": "react-router-dom"
+        },
+        {
+          "name": "antd",
+          "packageName": "antd"
+        }
+      ]
+    },
+    {
+      "title": "loadableWithProps 工具函数",
+      "description": "演示如何使用 loadableWithProps 动态加载组件并传递 props",
+      "code": "./loadable-with-props.js",
+      "scope": [
+        {
+          "name": "_AppChildrenRouter",
+          "packageName": "@kne/current-lib_app-children-router",
+          "importStatement": "import * as _AppChildrenRouter from \"@kne/app-children-router\""
+        },
+        {
+          "name": "antd",
+          "packageName": "antd"
+        }
+      ]
+    },
+    {
+      "title": "自定义错误页面",
+      "description": "展示如何自定义 Error 和 NotFound 页面",
+      "code": "./custom-error-pages.js",
+      "scope": [
+        {
+          "name": "_AppChildrenRouter",
+          "packageName": "@kne/current-lib_app-children-router",
+          "importStatement": "import * as _AppChildrenRouter from \"@kne/app-children-router\""
+        },
+        {
+          "name": "_reactRouterDom",
+          "packageName": "react-router-dom"
+        },
+        {
+          "name": "antd",
+          "packageName": "antd"
+        }
+      ]
+    },
+    {
+      "title": "嵌套路由",
+      "description": "展示如何在布局中使用嵌套路由，结合 element 属性实现复杂的路由结构",
+      "code": "./nested-routes.js",
       "scope": [
         {
           "name": "_AppChildrenRouter",
