@@ -5,7 +5,7 @@ import Error from './Error';
 import NotFound from './NotFound';
 import preset, { globalParams } from './preset';
 
-export const loadableWithProps = (loader, props = {}, loading) => {
+const LoadableWithProps = ({ loader, loading, ...props }) => {
   const ref = useRef({ loader, loading });
   const PageComponent = useMemo(() => {
     return loadable(ref.current.loader, {
@@ -16,7 +16,12 @@ export const loadableWithProps = (loader, props = {}, loading) => {
   return <PageComponent {...props} />;
 };
 
-export { preset, Error, NotFound };
+/** @deprecated Prefer <LoadableWithProps />; kept for existing call sites. */
+export const loadableWithProps = (loader, props = {}, loading) => {
+  return <LoadableWithProps loader={loader} loading={loading} {...props} />;
+};
+
+export { preset, Error, NotFound, LoadableWithProps };
 
 const AppChildrenRouter = ({ element, list = [], errorPage = globalParams.errorPage, notFoundPage = globalParams.notFountPage, loading, children, ...props }) => {
   const targetList = useMemo(() => {
@@ -34,7 +39,13 @@ const AppChildrenRouter = ({ element, list = [], errorPage = globalParams.errorP
     return output;
   }, [list, errorPage, notFoundPage]);
   const childrenList = targetList.map(({ loader, element, elementProps, ...routerProps }, index) => {
-    return <Route key={routerProps.path || index} {...routerProps} element={element || loadableWithProps(loader, Object.assign({}, props, elementProps), loading)} />;
+    return (
+      <Route
+        key={routerProps.path || index}
+        {...routerProps}
+        element={element || <LoadableWithProps key={routerProps.path || index} loader={loader} loading={loading} {...props} {...elementProps} />}
+      />
+    );
   });
 
   if (children || notFoundPage) {
