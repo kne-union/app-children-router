@@ -1,0 +1,2 @@
+"use strict";(globalThis.webpackChunk_app_children_router_0_1_10||=[]).push([[526],{35526(e,r,p){p.r(r);const n={AppChildrenRouter:p(2575).A};p.d(r,["default",0,n,"manifest",0,{name:"app-children-router",version:"0.1.10","open-version":!0,"public-url":"/app-children-router",modules:[{name:"app-children-router",baseDir:"/home/runner/work/app-children-router/app-children-router",description:"\u5b9a\u4e49\u5e94\u7528\u5b50\u8def\u7531",packageName:"@kne/app-children-router"}]}])}}]);
+//# sourceMappingURL=526.7d20d185.chunk.js.map
